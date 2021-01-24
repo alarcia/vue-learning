@@ -31,5 +31,11 @@ var app = new Vue({
     decrement(value1){
       this.number--
     }
+  },
+
+  watch: {
+    number: function(val){
+      console.log("watch: " + val)
+    }
   }
 })
