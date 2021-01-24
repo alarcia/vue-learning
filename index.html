@@ -4,10 +4,18 @@
     <meta charset="utf-8">
     <title>vue</title>
     <script src="js/vue.js"></script>
+    <style media="screen">
+      .error{
+        color: red;
+      }
+      .no_error{
+        color: blue;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-
+      <h1 :class="{ error: p_error, no_error: !p_error }">Lorem ipsum</h1>
       <div v-html="content_html"></div>
       <img :src="src" :alt="text" :title="text">
         <p>{{ message }}</p>

@@ -10,7 +10,8 @@ var app = new Vue({
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png",
     text: "Description of image",
     number: 13,
-    v_model: "I'm using v-model"
+    v_model: "I'm using v-model",
+    p_error: true
   },
   computed: {
     // a computed getter
