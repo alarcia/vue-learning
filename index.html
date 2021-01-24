@@ -7,6 +7,10 @@
   </head>
   <body>
     <div id="app">
+
+
+      <div v-html="content_html"></div>
+      <img :src="src" :alt="text" :title="text">
         <p>{{ message }}</p>
         <p>{{ sum }}</p>
         <p>{{ calculateSum(sum, 5) }}</p>

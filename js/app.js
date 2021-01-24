@@ -5,7 +5,10 @@ var app = new Vue({
     sum: 3+6,
     value: 6,
     isVisible: true,
-    people: ["Andy", "John", "Alex", "Jay"]
+    people: ["Andy", "John", "Alex", "Jay"],
+    content_html: "<h1>Hey vue</h1>",
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png",
+    text: "Description of image"
   },
   computed: {
     // a computed getter
