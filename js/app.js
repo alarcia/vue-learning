@@ -3,7 +3,9 @@ var app = new Vue({
   data: {
     message: 'Hello Vue',
     sum: 3+6,
-    value: 5
+    value: 6,
+    isVisible: true,
+    people: ["Andy", "John", "Alex", "Jay"]
   },
   computed: {
     // a computed getter
