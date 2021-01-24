@@ -15,7 +15,13 @@
   </head>
   <body>
     <div id="app">
-      <h1 :class="{ error: p_error, no_error: !p_error }">Lorem ipsum</h1>
+      <h1 :class="{ error: p_error, no_error: !p_error }">Am I wrong?</h1>
+      <!-- v-if false doesn't render the element -->
+      <h1 v-if="p_error">v-if test</h1>
+
+      <!-- v-show false just hides the element -->
+      <h1 v-show="p_error">v-show test</h1>
+
       <div v-html="content_html"></div>
       <img :src="src" :alt="text" :title="text">
         <p>{{ message }}</p>

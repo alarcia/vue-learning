@@ -11,7 +11,7 @@ var app = new Vue({
     text: "Description of image",
     number: 13,
     v_model: "I'm using v-model",
-    p_error: true
+    p_error: false
   },
   computed: {
     // a computed getter
