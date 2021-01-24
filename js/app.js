@@ -8,7 +8,8 @@ var app = new Vue({
     people: ["Andy", "John", "Alex", "Jay"],
     content_html: "<h1>Hey vue</h1>",
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png",
-    text: "Description of image"
+    text: "Description of image",
+    number: 13
   },
   computed: {
     // a computed getter
@@ -20,6 +21,14 @@ var app = new Vue({
   methods: {
     calculateSum(value1, value2){
       return value1 + value2;
+    },
+
+    increment(value1){
+      this.number++
+    },
+
+    decrement(value1){
+      this.number--
     }
   }
 })
