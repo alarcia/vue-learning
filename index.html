@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>vue</title>
-    <script src="js/vue.js"></script>
-    <style media="screen">
-      .error{
-        color: red;
-      }
-      .no_error{
-        color: blue;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app">
-      <h1 :class="{ error: p_error, no_error: !p_error }">Am I wrong?</h1>
-      <!-- v-if false doesn't render the element -->
-      <h1 v-if="p_error">v-if test</h1>
 
-      <!-- v-show false just hides the element -->
-      <h1 v-show="p_error">v-show test</h1>
+<head>
+  <meta charset="utf-8">
+  <title>vue</title>
+  <script src="js/vue.js"></script>
+  <script src="js/vue-router.js"></script>
+  <style media="screen">
+    .error {
+      color: red;
+    }
 
-      <div v-html="content_html"></div>
-      <img :src="src" :alt="text" :title="text">
-        <p>{{ message }}</p>
-        <p>{{ sum }}</p>
-        <p>{{ calculateSum(sum, 5) }}</p>
-        <p>Computed reversed message: "{{ reversedMessage }}"</p>
-    </div>
-    <script src="js/app.js"></script>
-  </body>
+    .no_error {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <router-link to="/foo">Go to Foo</router-link>
+    <router-link to="/bar">Go to Bar</router-link>
+
+    <router-view></router-view>
+
+    <h1 :class="{ error: p_error, no_error: !p_error }">Am I wrong?</h1>
+
+    <!-- v-if false doesn't render the element -->
+    <h1 v-if="p_error">v-if test</h1>
+
+    <!-- v-show false just hides the element -->
+    <h1 v-show="p_error">v-show test</h1>
+
+    <div v-html="content_html"></div>
+    <img :src="src" :alt="text" :title="text">
+    <p>{{ message }}</p>
+    <p>{{ sum }}</p>
+    <p>{{ calculateSum(sum, 5) }}</p>
+    <p>Computed reversed message: "{{ reversedMessage }}"</p>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
