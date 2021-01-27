@@ -4,20 +4,28 @@
 <head>
   <meta charset="utf-8">
   <title>router</title>
+  <!-- CSS only -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
   <script src="js/vue.js"></script>
   <script src="js/vue-router.js"></script>
 
 </head>
 
 <body>
-  <div id="app">
+  <div class="container">
 
-    <router-link to="/">Home</router-link>
-    <router-link to="/lists">List</router-link>
+    <div id="app">
 
-    <router-view></router-view>
+      <router-link to="/">Home</router-link>
+      <router-link to="/list_person">ListPerson</router-link>
+      <router-link to="/list_programming">ListsProgramming</router-link>
+
+      <router-view></router-view>
+    </div>
   </div>
-  <script src="js/components/Lists.js"></script>
+  <script src="js/components/ListsPerson.js"></script>
+  <script src="js/components/ListsProgramming.js"></script>
   <script src="js/app.js"></script>
 
 </body>

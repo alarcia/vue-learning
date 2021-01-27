@@ -1,5 +1,5 @@
-const Lists = {
-  name: "Lists",
+const ListsPerson = {
+  name: "ListsPerson",
   template: `
   <div>
     <ul>
