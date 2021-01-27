@@ -20,10 +20,19 @@
       <router-link to="/">Home</router-link>
       <router-link to="/list_people">ListPerson</router-link>
       <router-link to="/list_programming">ListsProgramming</router-link>
+      <router-link to="/list_pets">ListPets</router-link>
 
       <router-view></router-view>
+
     </div>
   </div>
+  <script type="text/x-template" id="PageNotFound">
+    <div>
+      <h1>We're sorry</h1>
+      <h2>Page not found</h2>
+    </div>
+  </script>
+
   <script src="js/components/ListsPerson.js"></script>
   <script src="js/components/ListsProgramming.js"></script>
   <script src="js/components/ListAlert.js"></script>
