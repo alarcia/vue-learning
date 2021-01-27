@@ -6,6 +6,10 @@ const router = new VueRouter({
   base: "router",
   routes:[
     {
+      path: '/',
+      component:Home
+    },
+    {
       path: '/list_people',
       redirect: '/list_person'
     },
@@ -28,4 +32,7 @@ const router = new VueRouter({
 var app = new Vue({
   router,
   el: '#app',
+  mounted(){
+    console.log(this.$route)
+  }
 })
