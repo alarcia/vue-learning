@@ -19,13 +19,26 @@ var app = new Vue({
     sum: 3+6,
     value: 6,
     isVisible: true,
+    filter_age: 30,
     people: ["Andy", "George", "Alexander", "Jay"],
+    ArrayObjects: [
+      {name: "Andy", surname: "Smith", age: 28},
+      {name: "John", surname: "Lee", age: 32},
+      {name: "George", surname: "Lucas", age: 67},
+      {name: "Jay", surname: "Pritchet", age: 68},
+      {name: "Bart", surname: "Simpson", age: 8},
+    ],
+    CopyArrayObjects: [],
     content_html: "<h1>Hey vue</h1>",
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/330px-Vue.js_Logo_2.svg.png",
     text: "Description of image",
     number: 13,
     v_model: "I'm using v-model",
     p_error: false
+  },
+
+  created: function(){
+    this.CopyArrayObjects = this.ArrayObjects;
   },
   computed: {
     // a computed getter
@@ -35,6 +48,13 @@ var app = new Vue({
     }
   },
   methods: {
+    filterPeopleObjects: function(){
+      this.ArrayObjects = this.CopyArrayObjects;
+      this.ArrayObjects = this.ArrayObjects.filter(
+        person => {
+          return person.age > this.filter_age
+        })
+    },
 
     filterPeople: function(){
       this.people = this.people.filter(
